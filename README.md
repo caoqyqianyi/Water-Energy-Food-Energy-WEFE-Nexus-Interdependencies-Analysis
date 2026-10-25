@@ -261,7 +261,6 @@ author = {\<Qianyi Cao>},
 year   = {2025},
 school = {\<Technical University of Munich>},
 note   = {TRANS-SAHARA Horizon Europe; AGIT 2025 Best Poster Award}
-}
 ```
 
 ## 14. Acknowledgements
