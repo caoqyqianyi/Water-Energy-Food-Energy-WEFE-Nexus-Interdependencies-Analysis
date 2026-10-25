@@ -1,0 +1,38 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- Environment / secrets ---
+.env
+
+# --- Data & generated outputs (large/binary; keep the folder, ignore contents) ---
+data/Outputs/
+data/*.shp
+data/*.shx
+data/*.dbf
+data/*.prj
+data/*.cpg
+data/*.tif
+data/*.tiff
+data/*.geojson
+data/*.gpkg
+data/*.csv
+!data/README.md
+
+# --- QGIS / Office temporary files ---
+*.qmd
+*.tmp
+~$*
+
+# --- macOS / Windows ---
+.DS_Store
+Thumbs.db

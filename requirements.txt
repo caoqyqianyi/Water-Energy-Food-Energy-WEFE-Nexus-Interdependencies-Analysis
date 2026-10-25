@@ -1,0 +1,14 @@
+# Core spatial data science stack
+geopandas>=0.14
+pandas>=2.0
+numpy>=1.24
+shapely>=2.0
+pyproj>=3.3
+
+# Raster handling and cartographic plotting
+rasterio>=1.3
+cartopy>=0.23
+
+# Note: QGIS (3.x) and Microsoft Power BI Desktop are desktop applications
+# used for map production and the interactive dashboard; they are not
+# pip-installable. See README.md for details.
