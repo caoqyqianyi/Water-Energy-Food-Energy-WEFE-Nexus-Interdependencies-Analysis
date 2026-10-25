@@ -78,7 +78,7 @@ TUN-WEFE-Nexus/
 ├── data/                    # Place inputs here (see data/README.md)
 ├── figures/                 # Maps and dashboard screenshots
 └── notebooks/
-&#x20;   └── TUN\_WEFE.ipynb       # Original research notebook (kept for reference)
+    └── TUN\_WEFE.ipynb       # Original research notebook (kept for reference)
 ```
 
 ## 4. Data inputs
@@ -96,42 +96,30 @@ The pipeline harmonises heterogeneous spatial and non-spatial datasets spanning 
 
 ```
 \# 1. Clone the repository
-
 git clone https://github.com/\<your-username>/TUN-WEFE-Nexus.git
-
 cd TUN-WEFE-Nexus
 
 \# 2. Create and activate a virtual environment
-
 python -m venv .venv
-
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
 \# 3. Install dependencies
-
 pip install -r requirements.txt
 ```
-
 Then place the input files in `data/` (or set `WEFE_DATA_DIR` to point at another folder). QGIS and Power BI are desktop applications used for map production and the dashboard, not Python dependencies.
 
 ## 6. Usage
 
 ```
 \# Run the full pipeline for the default year (configured in src/config.py)
-
 python main.py
 ```
-
 The pipeline can also be called from Python, for example to loop over several years:
-
 ```
 from src.pipeline import run\_pipeline
-
 for yr in (2015, 2017, 2019):
-
-&#x20;   result = run\_pipeline(year=yr)
-
-&#x20;   print(result\["agg\_national"])
+  result = run\_pipeline(year=yr)
+  print(result\["agg\_national"])
 ```
 
 ## 7. Methodology
@@ -141,14 +129,12 @@ for yr in (2015, 2017, 2019):
 The implementation of this thesis was grounded in a systematic and reproducible workflow designed to transform disparate data sources into a cohesive geospatial framework for analyzing the WEFE Nexus. This methodological approach was structured into four distinct phases: Data Collection, Pre-processing, Modeling, and Visualization.
 
 
-<img src="figures/WEFE_Implementation_Workflow.png" alt=" The workflow of the WEFE Nexus analysis" width="800">
+<img src="figures/WEFE Implementation Workflow.png" alt=" The workflow of the WEFE Nexus analysis" width="800">
 
 
 ### 7.2 Multi-scale and multi-temporal design
 
 The analysis is resolved across nested spatial scales and repeated over several years so that temporal variability is captured alongside spatial heterogeneity:
-
-
 
 ```mermaid
 flowchart LR
@@ -169,7 +155,6 @@ flowchart LR
 A metadata dictionary determines how each indicator is allocated to the grid. This keeps the logic data-driven and fully reproducible:
 
 
-
 | Assignment           | How it is applied to a cell                                                                  | Example                                 |
 | -------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------- |
 | `population`         | Constant value/% per cell, with population-weighted aggregation and a `_people_equiv` helper | Drinking water, electricity access, CO₂ |
@@ -181,7 +166,6 @@ A metadata dictionary determines how each indicator is allocated to the grid. Th
 Each indicator also carries a **direction**: `pos` means a higher value contributes to resilience, while `neg` marks a pressure (e.g. withdrawals, imports, undernourishment, emissions) that is inverted during normalization.
 
 ### 7.4 Normalization and composite scoring
-
 
 
 1. **Normalize** every indicator to `[0, 1]` with min-max scaling, inverting negative-direction indicators so that *higher always means more resilient*.
@@ -202,8 +186,6 @@ An interactive, map-based dashboard lets stakeholders explore nexus outcomes dyn
 
 All outputs are written to `data/Outputs/` (or `<WEFE_DATA_DIR>/Outputs/`):
 
-
-
 | File                              | Contents                                                                   |
 | --------------------------------- | -------------------------------------------------------------------------- |
 | `wefe_grid_attributes_<year>.csv` | Per-cell normalized indicators, pillar scores and WEFE Nexus (no geometry) |
@@ -215,7 +197,6 @@ All outputs are written to `data/Outputs/` (or `<WEFE_DATA_DIR>/Outputs/`):
 ## 9. Indicators at a glance
 
 The published notebook implements **21 indicators** across the Water, Energy and Food pillars; the **Ecosystem** pillar is supported by the framework and can be populated by adding metadata rows.
-
 
 
 | Pillar | Indicator                                     | Direction | Assignment     |
@@ -244,20 +225,19 @@ The published notebook implements **21 indicators** across the Water, Energy and
 
 ## 10. Key findings
 
-
-
 * **Critical hotspots** emerged where resource constraints and vulnerabilities converge, while other areas showed **synergies** favourable to sustainable agroforestry.
 
 * Composite indicators and pillar-specific maps revealed strong **spatial heterogeneity and temporal dynamics** reflecting both environmental conditions and socio-economic factors.
 
 * **Scenario comparisons** underscored the sensitivity of nexus outcomes to climatic fluctuations and policy interventions, reinforcing the case for integrated, place-based governance.
 
+<img src="figures/WEFE_PowerBI.png" alt=" The PowerBI dashboard of WEFE Nexus analyisis" width="800">
+
 ## 11. Limitations
 
-As noted in the thesis, data limitations and methodological simplifications mean the framework should be treated as a flexible foundation rather than a finished product. Where indicators are available only as national constants, within-country variation is understated; ongoing refinement, finer-scale data and **stakeholder co-production** are needed to strengthen the indicators and their interpretation.
+As noted in the thesis, data limitations and methodological simplifications mean the framework should be treated as a flexible foundation rather than a finished product. Where indicators are available only as national constants, within-country variation is understated; ongoing refinement, finer-scale data, and **stakeholder co-production** are needed to strengthen the indicators and their interpretation.
 
 ## 12. Reproducing and extending
-
 
 
 * **Add a year:** include it in the indicator tables (with `data_year`) and run `run_pipeline(year=...)`.
@@ -273,28 +253,20 @@ As noted in the thesis, data limitations and methodological simplifications mean
 If this work is useful, please cite the thesis (replace placeholders with the final bibliographic details):
 
 
-
 ```
 @mastersthesis{tun\_wefe\_2025,
 
-&#x20; title  = {Spatial Modelling and Cartographic Communication of the WEFE Nexus
-
-&#x20;           for Climate Resilience in Tunisian Agroforestry Systems},
-
-&#x20; author = {\<Your Name>},
-
-&#x20; year   = {2025},
-
-&#x20; school = {\<University>},
-
-&#x20; note   = {TRANS-SAHARA Horizon Europe; AGIT 2025 Best Poster Award}
-
+title  = {Visualizing Water-Energy-Food-Ecosystem (WEFE) Interdependencies at Different Scales},
+author = {\<Qianyi Cao>},
+year   = {2025},
+school = {\<Technical University of Munich>},
+note   = {TRANS-SAHARA Horizon Europe; AGIT 2025 Best Poster Award}
 }
 ```
 
 ## 14. Acknowledgements
 
-This research was carried out within the **TRANS-SAHARA Horizon Europe** project and recognised with the **AGIT 2025 Best Poster Award**. Sincere thanks to the supervisors, project partners and stakeholders who contributed data, feedback and local knowledge.
+This research was carried out within the **TRANS-SAHARA Horizon Europe** project and recognised with the **AGIT 2025 Best Poster Award**. Sincere thanks to the supervisors, project partners, and stakeholders who contributed data, feedback, and local knowledge.
 
 ## 15. License
 
