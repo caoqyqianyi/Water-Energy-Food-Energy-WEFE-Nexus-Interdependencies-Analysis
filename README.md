@@ -76,9 +76,7 @@ Single-sector indicators miss these linkages. This project instead operationalis
 
 The **WEFE Nexus** captures the interdependencies among four critical systems—**Water, Energy, Food and Ecosystems**—that are essential for sustainable development. The framework is pillar-agnostic: indicators are grouped into pillars, and new pillars or indicators are added through metadata rather than by rewriting analysis code.
 
-
-
-
+<img src="output/net_co2_pathways.png" alt="Net CO2 emissions pathways for all C1-C3 scenarios, with per-category medians" width="800">
 
 The analysis combines **spatial data modelling** with **cartographic communication** to make these complex interconnections legible to farmers, planners and policymakers.
 
