@@ -1,9 +1,6 @@
 # Data inputs
 
-The raw datasets are **not distributed** with this repository (they are large,
-binary or licensed). Place them in this folder, or point the pipeline elsewhere
-with the `WEFE_DATA_DIR` environment variable. The file names below match the
-defaults in [`src/config.py`](../src/config.py).
+The raw datasets are  large or private.  Here is the data structure for better understanding.
 
 ## Spatial layers
 
