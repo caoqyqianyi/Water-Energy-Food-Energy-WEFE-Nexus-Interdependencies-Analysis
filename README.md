@@ -85,8 +85,8 @@ TUN-WEFE-Nexus/
 The pipeline harmonises heterogeneous spatial and non-spatial datasets spanning hydrology, agriculture, energy access and ecosystem health. Raw data are not redistributed here; see [data/README.md](data/README.md) for the full schema. In brief:
 
 * **Spatial layers** — a Tunisia grid (`TUN_cells_WGS84.shp`), hydrological basins (`TUN_WaterBasin_level04.shp`) and climatic zones (`TUN_ClimaticZone.shp`) and some ecosystem indicator data layers.
-* 
-* <img src="figures/Data_GEE.png" alt="*Spatial Data Layers extracted from Google Earth Engine open source" width="800">
+  
+<img src="figures/Data_GEE.png" alt="*Spatial Data Layers extracted from Google Earth Engine open source" width="800">
 
 * **Indicator tables** — semicolon-separated CSVs for water, energy, and food, with an optional `data_year` column for multi-year analysis.
 
