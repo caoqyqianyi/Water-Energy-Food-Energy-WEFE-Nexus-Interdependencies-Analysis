@@ -1,7 +1,5 @@
 # Tunisia WEFE Nexus — Spatial Climate-Resilience Indicators
 
-
-
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python\&logoColor=white)![GeoPandas](https://img.shields.io/badge/spatial-GeoPandas-139C5A)![QGIS](https://img.shields.io/badge/QGIS-3.x-589632?logo=qgis\&logoColor=white)![Power BI](https://img.shields.io/badge/Power%20BI-dashboard-F2C811?logo=powerbi\&logoColor=black)![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)![AGIT 2025](https://img.shields.io/badge/AGIT%202025-Best%20Poster%20Award-C7242E)![TRANS-SAHARA](https://img.shields.io/badge/Horizon%20Europe-TRANS--SAHARA-004494?logo=europeanunion\&logoColor=white)
 
 > A reproducible, spatially explicit framework for quantifying 
@@ -23,38 +21,21 @@ This repository accompanies a **Master's thesis** conducted within the **TRANS-S
 ## Table of Contents
 
 
-
 1. [Why climate resilience?](#1-why-climate-resilience)
-
 2. [The WEFE Nexus approach](#2-the-wefe-nexus-approach)
-
 3. [Repository structure](#3-repository-structure)
-
 4. [Data inputs](#4-data-inputs)
-
 5. [Installation](#5-installation)
-
 6. [Usage](#6-usage)
-
 7. [Methodology](#7-methodology)
-
 8. [Outputs](#8-outputs)
-
 9. [Indicators at a glance](#9-indicators-at-a-glance)
-
 10. [Key findings](#10-key-findings)
-
 11. [Limitations](#11-limitations)
-
 12. [Reproducing and extending](#12-reproducing-and-extending)
-
 13. [Citation](#13-citation)
-
 14. [Acknowledgements](#14-acknowledgements)
-
 15. [License](#15-license)
-
-
 
 ***
 
@@ -63,8 +44,6 @@ This repository accompanies a **Master's thesis** conducted within the **TRANS-S
 Tunisia's agroforestry landscapes sit at the intersection of intensifying **climatic pressure**—rising temperatures, highly variable rainfall, drought and water stress—and structural **socio-economic pressure** on water, energy and food security. Building resilience means understanding not only how exposed each place is to these shocks, but how the underlying resource systems *interact*: a drought does not affect water alone, but propagates into irrigation, energy demand for pumping, agricultural productivity, and the health of ecosystems that buffer all three.
 
 Single-sector indicators miss these linkages. This project instead operationalises climate resilience **spatially**: every grid cell receives a transparent, comparable score that combines resource availability, access and pressure, making it possible to answer place-based questions such as:
-
-
 
 * *Where* do water, energy and food constraints converge into **resilience hotspots**?
 
@@ -82,57 +61,38 @@ The analysis combines **spatial data modelling** with **cartographic communicati
 
 ## 3. Repository structure
 
-
-
 ```
 TUN-WEFE-Nexus/
 
 ├── main.py                  # Entry point: runs the full pipeline
-
 ├── requirements.txt
-
 ├── LICENSE
-
 ├── README.md
-
 ├── src/
-
 │   ├── config.py            # Paths, year and analysis parameters
-
 │   ├── data\_loader.py       # Load spatial layers and indicator tables
-
 │   ├── metadata.py          # Indicator dictionary (pillar, assignment, direction)
-
 │   ├── indicators.py        # Assignment, min-max normalization, weighted mean
-
 │   ├── aggregation.py       # National / zone / basin rollups
-
 │   └── pipeline.py          # End-to-end orchestration
-
 ├── data/                    # Place inputs here (see data/README.md)
-
 ├── figures/                 # Maps and dashboard screenshots
-
 └── notebooks/
-
 &#x20;   └── TUN\_WEFE.ipynb       # Original research notebook (kept for reference)
 ```
 
 ## 4. Data inputs
-
 The pipeline harmonises heterogeneous spatial and non-spatial datasets spanning hydrology, agriculture, energy access and ecosystem health. Raw data are not redistributed here; see [data/README.md](data/README.md) for the full schema. In brief:
 
+* **Spatial layers** — a Tunisia grid (`TUN_cells_WGS84.shp`), hydrological basins (`TUN_WaterBasin_level04.shp`) and climatic zones (`TUN_ClimaticZone.shp`) and some ecosystem indicator data layers.
+* 
+* <img src="figures/Data_GEE.png" alt="*Spatial Data Layers extracted from Google Earth Engine open source" width="800">
 
-
-* **Spatial layers** — a Tunisia grid (`TUN_cells_WGS84.shp`), hydrological basins (`TUN_WaterBasin_level04.shp`) and climatic zones (`TUN_ClimaticZone.shp`).
-
-* **Indicator tables** — semicolon-separated CSVs for water, energy and food, with an optional `data_year` column for multi-year analysis.
+* **Indicator tables** — semicolon-separated CSVs for water, energy, and food, with an optional `data_year` column for multi-year analysis.
 
 * **Metadata** — `indicator_metadata.csv` is generated automatically on first run.
 
 ## 5. Installation
-
-
 
 ```
 \# 1. Clone the repository
@@ -156,8 +116,6 @@ Then place the input files in `data/` (or set `WEFE_DATA_DIR` to point at anothe
 
 ## 6. Usage
 
-
-
 ```
 \# Run the full pipeline for the default year (configured in src/config.py)
 
@@ -165,8 +123,6 @@ python main.py
 ```
 
 The pipeline can also be called from Python, for example to loop over several years:
-
-
 
 ```
 from src.pipeline import run\_pipeline
@@ -182,19 +138,11 @@ for yr in (2015, 2017, 2019):
 
 ### 7.1 Workflow overview
 
+The implementation of this thesis was grounded in a systematic and reproducible workflow designed to transform disparate data sources into a cohesive geospatial framework for analyzing the WEFE Nexus. This methodological approach was structured into four distinct phases: Data Collection, Pre-processing, Modeling, and Visualization.
 
 
-```mermaid
-flowchart TD
-    A["Multi-source inputs<br/>(spatial + tabular)"] --> B["Harmonisation &amp;<br/>grid assignment"]
-    B --> C["Direction-aware<br/>min-max normalization"]
-    C --> D["Pillar scores<br/>Water · Energy · Food · Ecosystem"]
-    D --> E["Composite WEFE Nexus index"]
-    E --> F["Multi-scale aggregation<br/>grid · basin · climatic zone · national"]
-    F --> G["Export CSV / GeoJSON"]
-    G --> H["Decision-support dashboard<br/>QGIS + Power BI"]
-    H --> I["Hotspots, synergies &amp;<br/>scenario comparison"]
-```
+<img src="figures/WEFE_Implementation_Workflow.png" alt=" The workflow of the WEFE Nexus analysis" width="800">
+
 
 ### 7.2 Multi-scale and multi-temporal design
 
