@@ -70,7 +70,7 @@ TUN-WEFE-Nexus/
 ├── README.md
 ├── src/
 │   ├── config.py            # Paths, year and analysis parameters
-│   ├── data\_loader.py       # Load spatial layers and indicator tables
+│   ├── data\_loader.py      # Load spatial layers and indicator tables
 │   ├── metadata.py          # Indicator dictionary (pillar, assignment, direction)
 │   ├── indicators.py        # Assignment, min-max normalization, weighted mean
 │   ├── aggregation.py       # National / zone / basin rollups
@@ -78,7 +78,7 @@ TUN-WEFE-Nexus/
 ├── data/                    # Place inputs here (see data/README.md)
 ├── figures/                 # Maps and dashboard screenshots
 └── notebooks/
-    └── TUN\_WEFE.ipynb       # Original research notebook (kept for reference)
+    └── TUN\_WEFE.ipynb      # Original research notebook (kept for reference)
 ```
 
 ## 4. Data inputs
