@@ -12,7 +12,7 @@
 >
 >  across agroforestry landscapes in Tunisia.
 
-This repository accompanies a **Master's thesis** conducted within the **TRANS-SAHARA Horizon Europe** project and was awarded the **AGIT 2025 Best Poster Award**. The original research notebook has been refactored into a modular, reproducible Python/SQL workflow that harmonises multi-source environmental and socio-economic data, computes composite spatial resilience indicators, and feeds an interactive map-based decision-support dashboard built with **QGIS** and **Power BI**.[AGIT 2025 Best‑Poster‑link](https://agit25posters.blogspot.com/2025/06/45-visualizing-water-energy-food.html)
+This repository accompanies a **Master's thesis** conducted within the **TRANS-SAHARA Horizon Europe** project and was awarded the **AGIT 2025 Best Poster Award**. The original research notebook has been refactored into a modular, reproducible Python/SQL workflow that harmonises multi-source environmental and socio-economic data, computes composite spatial resilience indicators, and feeds an interactive map-based decision-support dashboard built with **QGIS** and **Power BI**. [TRANS-SAHARA Horizon Europe](https://trans-sahara.eu/) | [AGIT 2025 Best‑Poster‑link](https://agit25posters.blogspot.com/2025/06/45-visualizing-water-energy-food.html)
 
 
 
@@ -250,11 +250,10 @@ As noted in the thesis, data limitations and methodological simplifications mean
 
 ## 13. Citation
 
-If this work is useful, please cite the thesis (replace placeholders with the final bibliographic details):
-
+If this work is useful, please cite the thesis:
 
 ```
-@mastersthesis{tun\_wefe\_2025,
+@mastersthesis{Water\Energy\Food\Ecosystem\WEFE\Nexus\Inderdependencies\Analysis,
 
 title  = {Visualizing Water-Energy-Food-Ecosystem (WEFE) Interdependencies at Different Scales},
 author = {\<Qianyi Cao>},
