@@ -78,24 +78,7 @@ The **WEFE Nexus** captures the interdependencies among four critical systems—
 
 
 
-```mermaid
-flowchart TB
-    CL["Climate variability &amp; socio-economic pressure"]
-    W["Water"]
-    E["Energy"]
-    F["Food"]
-    EC["Ecosystems"]
-    W <--> E
-    E <--> F
-    F <--> W
-    W <--> EC
-    E <--> EC
-    F <--> EC
-    CL -.-> W
-    CL -.-> E
-    CL -.-> F
-    CL -.-> EC
-```
+
 
 The analysis combines **spatial data modelling** with **cartographic communication** to make these complex interconnections legible to farmers, planners and policymakers.
 
