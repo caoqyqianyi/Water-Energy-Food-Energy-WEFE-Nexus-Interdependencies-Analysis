@@ -12,7 +12,7 @@
 >
 >  across agroforestry landscapes in Tunisia.
 
-This repository accompanies a **Master's thesis** conducted within the **TRANS-SAHARA Horizon Europe** project and was awarded the **AGIT 2025 Best Poster Award**. The original research notebook has been refactored into a modular, reproducible Python/SQL workflow that harmonises multi-source environmental and socio-economic data, computes composite spatial resilience indicators, and feeds an interactive map-based decision-support dashboard built with **QGIS** and **Power BI**.
+This repository accompanies a **Master's thesis** conducted within the **TRANS-SAHARA Horizon Europe** project and was awarded the **AGIT 2025 Best Poster Award**. The original research notebook has been refactored into a modular, reproducible Python/SQL workflow that harmonises multi-source environmental and socio-economic data, computes composite spatial resilience indicators, and feeds an interactive map-based decision-support dashboard built with **QGIS** and **Power BI**.[AGIT 2025 Best‑Poster‑link](https://agit25posters.blogspot.com/2025/06/45-visualizing-water-energy-food.html)
 
 
 
@@ -266,6 +266,8 @@ note   = {TRANS-SAHARA Horizon Europe; AGIT 2025 Best Poster Award}
 ## 14. Acknowledgements
 
 This research was carried out within the **TRANS-SAHARA Horizon Europe** project and recognised with the **AGIT 2025 Best Poster Award**. Sincere thanks to the supervisors, project partners, and stakeholders who contributed data, feedback, and local knowledge.
+
+[AGIT 2025 Best‑Poster‑link](https://agit25posters.blogspot.com/2025/06/45-visualizing-water-energy-food.html)
 
 ## 15. License
 
