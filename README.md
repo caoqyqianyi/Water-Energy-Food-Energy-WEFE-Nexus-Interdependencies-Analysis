@@ -2,31 +2,7 @@
 
 
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python\&logoColor=white)
-
-
-
-![GeoPandas](https://img.shields.io/badge/spatial-GeoPandas-139C5A)
-
-
-
-![QGIS](https://img.shields.io/badge/QGIS-3.x-589632?logo=qgis\&logoColor=white)
-
-
-
-![Power BI](https://img.shields.io/badge/Power%20BI-dashboard-F2C811?logo=powerbi\&logoColor=black)
-
-
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-
-
-![AGIT 2025](https://img.shields.io/badge/AGIT%202025-Best%20Poster%20Award-C7242E)
-
-
-
-![TRANS-SAHARA](https://img.shields.io/badge/Horizon%20Europe-TRANS--SAHARA-004494?logo=europeanunion\&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python\&logoColor=white)![GeoPandas](https://img.shields.io/badge/spatial-GeoPandas-139C5A)![QGIS](https://img.shields.io/badge/QGIS-3.x-589632?logo=qgis\&logoColor=white)![Power BI](https://img.shields.io/badge/Power%20BI-dashboard-F2C811?logo=powerbi\&logoColor=black)![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)![AGIT 2025](https://img.shields.io/badge/AGIT%202025-Best%20Poster%20Award-C7242E)![TRANS-SAHARA](https://img.shields.io/badge/Horizon%20Europe-TRANS--SAHARA-004494?logo=europeanunion\&logoColor=white)
 
 > A reproducible, spatially explicit framework for quantifying 
 >
