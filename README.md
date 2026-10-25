@@ -20,22 +20,21 @@ This repository accompanies a **Master's thesis** conducted within the **TRANS-S
 
 ## Table of Contents
 
-
-1. [Why climate resilience?](#1-why-climate-resilience)
-2. [The WEFE Nexus approach](#2-the-wefe-nexus-approach)
-3. [Repository structure](#3-repository-structure)
-4. [Data inputs](#4-data-inputs)
-5. [Installation](#5-installation)
-6. [Usage](#6-usage)
-7. [Methodology](#7-methodology)
-8. [Outputs](#8-outputs)
-9. [Indicators at a glance](#9-indicators-at-a-glance)
-10. [Key findings](#10-key-findings)
-11. [Limitations](#11-limitations)
-12. [Reproducing and extending](#12-reproducing-and-extending)
-13. [Citation](#13-citation)
-14. [Acknowledgements](#14-acknowledgements)
-15. [License](#15-license)
+*  [Why climate resilience?](#1-why-climate-resilience)
+*  [The WEFE Nexus approach](#2-the-wefe-nexus-approach)
+*  [Repository structure](#3-repository-structure)
+*  [Data inputs](#4-data-inputs)
+*  [Installation](#5-installation)
+*  [Usage](#6-usage)
+*  [Methodology](#7-methodology)
+*  [Outputs](#8-outputs)
+*  [Indicators at a glance](#9-indicators-at-a-glance)
+*  [Key findings](#10-key-findings)
+*  [Limitations](#11-limitations)
+*  [Reproducing and extending](#12-reproducing-and-extending)
+*  [Citation](#13-citation)
+*  [Acknowledgements](#14-acknowledgements)
+*  [License](#15-license)
 
 ***
 
